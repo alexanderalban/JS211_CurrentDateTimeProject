@@ -1,25 +1,38 @@
-// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work in 421 and you need to brush up on your HTML elements**
+// **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work 
+// in 421 and you need to brush up on your HTML elements**
 
 
 // ***************************
 //          PART ONE
 // ***************************
 // Write a JavaScript program to display the current day and time, start with:
-console.log(new Date)
+// console.log(new Date)
 
 const displayDate = () => {
   const currentDate = new Date()
-
-  document.getElementById("display-element").innerHTML = currentDate;
-}
+  document.getElementById("time-and-date").innerHTML = currentDate;
+};
  
 
-// Write a JavaScript program to convert a number to a string.
+// ********Write a JavaScript program to convert a number to a string.
+
+const convertToString = () => {
+  let x = document.getElementById("number-to-string").value;
+  let y = x.toString();
+  console.log(y);
+};
+
+
+// console.log(x.toString());
 
 
 
-// Write a JavaScript program to convert a string to the number.
+// ********Write a JavaScript program to convert a string to the number.
 
+const convertToNumber = () => {
+  let x = document.getElementById("string-to-number").value;
+  console.log(Number(x));
+};
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -31,20 +44,43 @@ const displayDate = () => {
   // * String
   
 
+const showDataType = () => {
+  let x = document.getElementById("show-type").value;
+  // console.log(typeof x);
+  // return typeof x;
+  alert(typeof x);
+};
+
+
   
-// Write a JavaScript program that adds 2 numbers together.
+// ********Write a JavaScript program that adds 2 numbers together.
+
+const addNumbers = (num1, num2) => {
+  num1 = document.getElementById("math-num-1").value;
+  num2 = document.getElementById("math-num-1").value;
+  x = +num1 + +num2;
+  console.log(x);
+};
 
 
 
-// Write a JavaScript program that runs only when 2 things are true.
+// ********Write a JavaScript program that runs only when 2 things are true.
 
 
 
-// Write a JavaScript program that runs when 1 of 2 things are true.
+
+
+// *********Write a JavaScript program that runs when 1 of 2 things are true.
 
 
 
-// Write a JavaScript program that runs when both things are not true.  
+
+
+// **********Write a JavaScript program that runs when both things are not true.  
+
+
+
+
 
 // ***************************
 //         PART TWO

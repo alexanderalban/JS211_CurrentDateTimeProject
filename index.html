@@ -6,10 +6,30 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <hr/>
+    <header>
+      <h1>Hello there!</h1>
+    </header>
+    <main>
+      <hr/>
+      <section id="time-and-date"></section>
+      <button onclick="displayDate()">Click Me</button>
+      <hr/>
+        <label for="number-to-string">Type in a number to see it converted to a string!</label><br>
+        <input type="number" id="number-to-string" name="number-to-string" onkeyup="convertToString()">
+        <hr>
+        <label for="string-to-number">Type in a number as a string to see it converted to a number!</label><br>
+        <input type="text" id="string-to-number" name="string-to-number" onkeyup="convertToNumber()">
+        <hr>
+        <label for="show-type">Type to reveal what type of data it is!</label><br>
+        <input type="text" id="show-type" name="show-type">
+        <button onclick="showDataType()">Show the Type!</button>
+        <hr>
+        <label for="math-num-1">Type in two numbers to return the sum!</label><br>
+        <input type="number" id="math-num-1" name="math-num-1">
+        +
+        <input type="number" id="math-num-2" name="math-num-2">
+        <button onclick="addNumbers()">Get the sum!</button>
+        <hr>
+    </main>
   </body>
 </html>
