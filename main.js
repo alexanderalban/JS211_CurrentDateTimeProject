@@ -57,8 +57,8 @@ const showDataType = () => {
 
 const addNumbers = (num1, num2) => {
   num1 = document.getElementById("math-num-1").value;
-  num2 = document.getElementById("math-num-1").value;
-  x = +num1 + +num2;
+  num2 = document.getElementById("math-num-2").value;
+  let x = +num1 + +num2;
   console.log(x);
 };
 
