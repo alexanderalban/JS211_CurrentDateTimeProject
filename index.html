@@ -11,25 +11,39 @@
     </header>
     <main>
       <hr/>
-      <section id="time-and-date"></section>
-      <button onclick="displayDate()">Click Me</button>
+      <p>Click the button below to show the date and time!</p>
+      <section id="time-and-date"></section><br>
+      <button onclick="displayDate()">Date and Time!</button>
       <hr/>
         <label for="number-to-string">Type in a number to see it converted to a string!</label><br>
-        <input type="number" id="number-to-string" name="number-to-string" onkeyup="convertToString()">
+        <input type="number" id="number-to-string" name="number-to-string">
+        <button onclick="convertToString()">Convert to String!</button>
+        <h2 id="string-Result"></h2>
         <hr>
         <label for="string-to-number">Type in a number as a string to see it converted to a number!</label><br>
-        <input type="text" id="string-to-number" name="string-to-number" onkeyup="convertToNumber()">
+        <input type="text" id="string-to-number" name="string-to-number">
+        <button onclick="convertToNumber()">Convert to number!</button>
+        <h2 id="number-Result"></h2>
         <hr>
-        <label for="show-type">Type to reveal what type of data it is!</label><br>
-        <input type="text" id="show-type" name="show-type">
+        <label for="data-Reveal">Type to reveal what type of data it is!</label><br>
+        <input id="data-Reveal" name="data-Reveal">
         <button onclick="showDataType()">Show the Type!</button>
+        <h2 id="data-Result"></h2>
         <hr>
         <label for="math-num-1">Type in two numbers to return the sum!</label><br>
         <input type="number" id="math-num-1" name="math-num-1">
         +
         <input type="number" id="math-num-2" name="math-num-2">
         <button onclick="addNumbers()">Get the sum!</button>
+        <h2 id="sum-Result"></h2>
         <hr>
+        <p>Pop quiz! (Don't worry, there won't be a grade.) Let's say that we've got four variables: 
+          W = 64, X = 45, Y = 45, and Z = 64. Click on the statement below that you think is right!
+          (Like I said, there's no grade. You can click all of them if you want. Go on. Live a little.)
+        </p>
+        <button id="both-are-true" onclick="twoAreTrue()">X = Y and W = Z</button>
+        <button id="one-is-true" onclick="oneIsTrue()">X = Y and Y = W</button>
+        <button id="both-are-false" onclick="bothAreFalse()">X = Z, Y = W</button>
     </main>
   </body>
 </html>

@@ -20,18 +20,23 @@ const convertToString = () => {
   let x = document.getElementById("number-to-string").value;
   let y = x.toString();
   console.log(y);
+  console.log(x + " is now a " + typeof y + "!");
+  document.getElementById("string-Result").innerHTML = x + " is now a " + typeof y + "!"
 };
 
 
 // console.log(x.toString());
-
+ 
 
 
 // ********Write a JavaScript program to convert a string to the number.
 
 const convertToNumber = () => {
   let x = document.getElementById("string-to-number").value;
-  console.log(Number(x));
+  let y = parseFloat(x);
+  let z = Number(y);
+  console.log(x + " is now a " + typeof z + "!" + " It's " + y);
+  document.getElementById("number-Result").innerHTML = x + " is now a " + typeof z + "!" + " It's " + y;
 };
 
 
@@ -45,10 +50,10 @@ const convertToNumber = () => {
   
 
 const showDataType = () => {
-  let x = document.getElementById("show-type").value;
-  // console.log(typeof x);
-  // return typeof x;
-  alert(typeof x);
+  let x = document.getElementById("data-Reveal").value;
+  console.log(typeof x)
+  console.log(x);
+  document.getElementById("data-Result").innerHTML = typeof x;
 };
 
 
@@ -58,27 +63,57 @@ const showDataType = () => {
 const addNumbers = (num1, num2) => {
   num1 = document.getElementById("math-num-1").value;
   num2 = document.getElementById("math-num-2").value;
-  let x = +num1 + +num2;
+  let x = parseInt(num1) + parseInt(num2);
   console.log(x);
+  document.getElementById("sum-Result").innerHTML = x;
 };
 
 
 
 // ********Write a JavaScript program that runs only when 2 things are true.
 
+const twoAreTrue = () => {
+  let x = 45;
+  let y = 45;
+  let z = 64;
+  let w = 64;
 
+  if (x === y && z === w) {
+    alert("Both are true! Thanks for clicking");
+  }
+}
 
 
 
 // *********Write a JavaScript program that runs when 1 of 2 things are true.
 
+const oneIsTrue = () => {
+  let x = 45;
+  let y = 45;
+  let z = 64;
+  let w = 64;
 
+  if (x === y || y === w) {
+    alert("Oh no! Only one of these statements is true! Try again!");
+  }
+}
 
 
 
 // **********Write a JavaScript program that runs when both things are not true.  
 
+const bothAreFalse = () => {
+  let x = 45;
+  let y = 45;
+  let z = 64;
+  let w = 64;
 
+  if (x === z || y === w) {
+    alert("Wait, what? How did you do that?");
+  } else {
+    alert("Oof, sorry. Neither of those are true. Try again!");
+  }
+}
 
 
 
@@ -92,7 +127,8 @@ const addNumbers = (num1, num2) => {
 // 4. Go local host 5500 or http://127.0.0.1:5500/index.html to see your web page
 // 5. Or go use the `npm start` command and navigate to localhost:8080 (ctrl + C to close)
 // 6. go to `index.html` 
-// 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
+// 7. create inputs, buttons and event listeners that render the code blocks you built 
+//above to the DOM.
 
 
 
