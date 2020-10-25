@@ -18,4 +18,4 @@ jobs:
           paths:
             - node_modules
           key: npm-packages-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run: 'npm run lint'
+      - run: "npm run lint"
