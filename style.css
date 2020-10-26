@@ -90,3 +90,16 @@ button {
 button:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  #time-section,
+  #number-section,
+  #add-section,
+  #quiz-section {
+    grid-column: 1 / 2;
+  }
+}
