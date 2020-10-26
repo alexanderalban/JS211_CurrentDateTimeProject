@@ -1,6 +1,7 @@
 // **THIS IS INCREDIBLY IMPORTANT THAT YOU DO BOTH SECTIONS!!! You will be doing only front-end work 
 // in 421 and you need to brush up on your HTML elements**
 
+"use strict";
 
 // ***************************
 //          PART ONE
@@ -33,7 +34,9 @@ const convertToString = () => {
 
 const convertToNumber = () => {
   let x = document.getElementById("string-to-number").value;
-  let y = parseFloat(x);
+  // let x = " 64"
+  eval(x);
+  let y = parseInt(x);
   let z = Number(y);
   console.log(x + " is now a " + typeof z + "!" + " It's " + y);
   document.getElementById("number-Result").innerHTML = x + " is now a " + typeof z + "!" + " It's " + y;
@@ -51,9 +54,22 @@ const convertToNumber = () => {
 
 const showDataType = () => {
   let x = document.getElementById("data-Reveal").value;
-  console.log(typeof x)
+  // let x = false;
+  if (x === "false") {
+    x = false;
+  } else if (x === "true") {
+    x = true;
+  } else if (x === " ") {
+    x = null;
+  } else if (x === "") {
+    x = undefined;
+  } else {
+    x = parseInt(x);
+  }
+  console.log(typeof x);
+  // eval(x);
   console.log(x);
-  document.getElementById("data-Result").innerHTML = typeof x;
+  document.getElementById("data-Result").innerHTML = x + " = " + typeof x + "!";
 };
 
 

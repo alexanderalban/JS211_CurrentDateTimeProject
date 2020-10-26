@@ -50,6 +50,7 @@ label {
   border: 1px solid black;
   box-shadow: 0px 0px 10pt 1pt black;
   border-radius: 3px;
+  transition: 0.3s ease-in-out;
 }
 
 #time-section {
@@ -90,6 +91,8 @@ button {
 button:hover {
   transform: scale(1.1);
 }
+
+/* Reactive Settings */
 
 @media (max-width: 600px) {
   main {
