@@ -34,7 +34,6 @@ const convertToString = () => {
 
 const convertToNumber = () => {
   let x = document.getElementById("string-to-number").value;
-  // let x = " 64"
   let y = parseInt(x);
   let z = Number(y);
   console.log(x + " is now a " + typeof z + "!" + " It's " + y);
@@ -66,8 +65,7 @@ const showDataType = () => {
   } else if (x === "nan") {
     x = NaN;
   } else if (typeof x === "string") {
-        x = parseInt(x);
-        Number(x);
+        x = Number(x);
         console.log(typeof x);
         if (isNaN(x) === true) {
           x = document.getElementById("data-Reveal").value;
