@@ -35,7 +35,6 @@ const convertToString = () => {
 const convertToNumber = () => {
   let x = document.getElementById("string-to-number").value;
   // let x = " 64"
-  eval(x);
   let y = parseInt(x);
   let z = Number(y);
   console.log(x + " is now a " + typeof z + "!" + " It's " + y);
@@ -53,21 +52,28 @@ const convertToNumber = () => {
   
 
 const showDataType = () => {
-  let x = document.getElementById("data-Reveal").value;
-  // let x = false;
+  let x = document.getElementById("data-Reveal").value.toLowerCase();
+  console.log(x);
+
   if (x === "false") {
     x = false;
   } else if (x === "true") {
     x = true;
-  } else if (x === " ") {
+  } else if (x === "null") {
     x = null;
   } else if (x === "") {
     x = undefined;
-  } else {
-    x = parseInt(x);
-  }
+  } else if (x === "nan") {
+    x = NaN;
+  } else if (typeof x === "string") {
+        x = parseInt(x);
+        Number(x);
+        console.log(typeof x);
+        if (isNaN(x) === true) {
+          x = document.getElementById("data-Reveal").value;
+        }
+      }
   console.log(typeof x);
-  // eval(x);
   console.log(x);
   document.getElementById("data-Result").innerHTML = x + " = " + typeof x + "!";
 };
