@@ -10,12 +10,24 @@ html {
 header {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  border-radius: 3px;
+}
+
+#main-title {
+  background-color: rgb(240, 248, 255, 0.8);
+  justify-self: center;
+  padding: 10pt;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10pt 1pt black;
 }
 
 main {
   display: grid;
   grid-template-columns: 1fr, 1fr;
   font-family: Arial, Helvetica, sans-serif;
+  justify-content: center;
+  grid-gap: 10px;
 }
 
 #time-section {
@@ -27,13 +39,11 @@ main {
 #string-section,
 #data-section {
   grid-column: 1 / 2;
-  justify-self: center;
 }
 
 #number-section,
 #add-section {
   grid-column: 2 / 3;
-  justify-self: center;
 }
 
 #quiz-section {
@@ -47,7 +57,28 @@ main {
   justify-self: center;
 }
 
+button {
+  background-color: rgb(108, 127, 130);
+  font-size: 12pt;
+  border-radius: 3px;
+  color: white;
+}
+
 .all-Sections {
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: rgb(240, 248, 255, 0.8);
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 10pt 1pt black;
+  border-radius: 3px;
+}
+
+p {
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
 }
