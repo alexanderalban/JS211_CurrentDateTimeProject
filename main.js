@@ -11,9 +11,23 @@
 
 const displayDate = () => {
   const currentDate = new Date()
+  console.log(new Date);
   document.getElementById("time-and-date").innerHTML = currentDate;
 };
- 
+
+const displayDay = () => {
+  const currentDay = new Date();
+  console.log(new Date);
+  let myHour = currentDay.getHours();
+  let myMinutes = currentDay.getMinutes();
+  if (myMinutes < 10) {
+    myMinutes = "0" + myMinutes;
+  };
+  let dayNumber = currentDay.getDay();
+  let dayArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let myDay = dayArray[dayNumber];
+  document.getElementById("time-and-date").innerHTML = myDay + " " + myHour + ":" + myMinutes;
+}
 
 // ********Write a JavaScript program to convert a number to a string.
 
@@ -25,9 +39,6 @@ const convertToString = () => {
   document.getElementById("string-Result").innerHTML = x + " is now a " + typeof y + "!"
 };
 
-
-// console.log(x.toString());
- 
 
 
 // ********Write a JavaScript program to convert a string to the number.
@@ -42,13 +53,13 @@ const convertToNumber = () => {
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
-  
+// * Boolean
+// * Null
+// * Undefined
+// * Number
+// * NaN
+// * String
+
 
 const showDataType = () => {
   let x = document.getElementById("data-Reveal").value.toLowerCase();
@@ -65,19 +76,19 @@ const showDataType = () => {
   } else if (x === "nan") {
     x = NaN;
   } else if (typeof x === "string") {
-        x = Number(x);
-        console.log(typeof x);
-        if (isNaN(x) === true) {
-          x = document.getElementById("data-Reveal").value;
-        }
-      }
+    x = Number(x);
+    console.log(typeof x);
+    if (isNaN(x) === true) {
+      x = document.getElementById("data-Reveal").value;
+    }
+  }
   console.log(typeof x);
   console.log(x);
   document.getElementById("data-Result").innerHTML = x + " = " + typeof x + "!";
 };
 
 
-  
+
 // ********Write a JavaScript program that adds 2 numbers together.
 
 const addNumbers = (num1, num2) => {
